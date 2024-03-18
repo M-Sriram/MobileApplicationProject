@@ -49,7 +49,7 @@ class LoginActivity : AppCompatActivity() {
         authentic?.signInWithEmailAndPassword(trim,trim1)
             ?.addOnCompleteListener(this@LoginActivity) { task: Task<AuthResult?> ->
                 if (task.isSuccessful) {
-                    startActivity(Intent(this@LoginActivity, CandidateActivity::class.java))
+                    startActivity(Intent(this@LoginActivity, IntroActivity::class.java))
                 } else {
                     Toast.makeText(this@LoginActivity, task.exception?.message,Toast.LENGTH_SHORT).show()
                 }

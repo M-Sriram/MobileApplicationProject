@@ -54,4 +54,5 @@ dependencies {
     //Form
     implementation ("com.google.android.material:material:1.2.0")
     implementation ("androidx.coordinatorlayout:coordinatorlayout:1.1.0")
+    implementation ("com.google.firebase:firebase-firestore-ktx:23.0.3")
 }

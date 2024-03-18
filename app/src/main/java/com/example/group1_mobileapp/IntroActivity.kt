@@ -67,5 +67,13 @@ class IntroActivity : AppCompatActivity() {
             val textViewCandidateName = findViewById<TextView>(R.id.textViewCandidateName)
             textViewCandidateName.text = "\n $candidateName" // Set candidate's name in TextView with appropriate spacing
         }
+
+        val btnGoToHome = findViewById<Button>(R.id.btnGoToHome)
+        btnGoToHome.setOnClickListener {
+            // Start the HomeActivity
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 }

@@ -24,7 +24,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Hello, Welcome"
-            android:textSize="45sp"
+            android:textSize="24sp"
             android:fontFamily="@font/bubblegum_sans"
             android:textColor="@android:color/white"
             android:layout_gravity="center"
@@ -70,7 +70,7 @@
                 android:id="@+id/textViewCandidateName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="25dp"
+                android:textSize="25sp"
                 android:textStyle="bold"
                 android:textColor="@android:color/black" />
 
@@ -90,7 +90,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Explore Our Candidates"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:backgroundTint="@color/black"/>
         <Button
             android:id="@+id/btnLogin"
@@ -107,7 +107,14 @@
             android:text="Logout"
             android:layout_centerInParent="true"
             android:layout_marginTop="16dp"/>
-
+        <Button
+            android:id="@+id/btnGoToHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Go to Home"
+            android:layout_marginTop="16dp"
+            android:layout_below="@id/btnLogout"
+            android:layout_centerHorizontal="true"/>
 
     </LinearLayout>
 
