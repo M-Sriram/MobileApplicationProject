@@ -3,8 +3,10 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import com.bumptech.glide.Glide
 import com.google.firebase.auth.FirebaseAuth
 
 class IntroActivity : AppCompatActivity() {
@@ -14,6 +16,14 @@ class IntroActivity : AppCompatActivity() {
 
         val textView = findViewById<TextView>(R.id.textView)
         textView.text = "Welcome to the Intro Activity"
+
+        // Initialize ImageView and TextView to display candidate information
+        val imageViewCandidate = findViewById<ImageView>(R.id.imageViewCandidate)
+        val textViewCandidateName = findViewById<TextView>(R.id.textViewCandidateName)
+
+        // Load candidate's image from intent extras using Glide
+        val candidateImageRes = intent.getStringExtra("candidateImageRes")
+        Glide.with(this).load(candidateImageRes).into(imageViewCandidate)
 
         // Logout the user when the app starts
         FirebaseAuth.getInstance().signOut()
@@ -49,6 +59,13 @@ class IntroActivity : AppCompatActivity() {
             FirebaseAuth.getInstance().signOut()
             // Show a toast message
             Toast.makeText(this@IntroActivity, "You have been logged out", Toast.LENGTH_SHORT).show()
+        }
+
+        // Initialize headerTextView text only if candidateName is not null
+        val candidateName = intent.getStringExtra("candidateName")
+        if (candidateName != null) {
+            val textViewCandidateName = findViewById<TextView>(R.id.textViewCandidateName)
+            textViewCandidateName.text = "\n $candidateName" // Set candidate's name in TextView with appropriate spacing
         }
     }
 }

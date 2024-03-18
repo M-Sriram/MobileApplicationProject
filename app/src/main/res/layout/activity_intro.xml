@@ -50,6 +50,32 @@
             android:textStyle="bold"
             android:layout_marginBottom="16dp"/>
 
+        <!-- Candidate Image and Name Layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Candidate Image -->
+            <ImageView
+                android:id="@+id/imageViewCandidate"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/default_candidate_image"/>
+
+            <!-- Candidate Name TextView -->
+            <TextView
+                android:id="@+id/textViewCandidateName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
+
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
