@@ -67,12 +67,21 @@
             android:textSize="20dp"
             android:backgroundTint="@color/black"/>
         <Button
-            android:id="@+id/btnRegister"
+            android:id="@+id/btnLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Register"
-            android:textSize="20dp"
-            android:backgroundTint="@color/black"/>
+            android:text="Login"
+            android:layout_below="@id/btnGoToCandidate"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"/>
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="16dp"/>
+
 
     </LinearLayout>
 
