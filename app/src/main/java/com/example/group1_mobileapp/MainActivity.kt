@@ -12,7 +12,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val imageView = findViewById<ImageView>(R.id.imageView)
-        // Set your image resource here
         imageView.setImageResource(R.drawable.recruitlogo)
 
         val btnGoToIntro = findViewById<Button>(R.id.btnGoToIntro)

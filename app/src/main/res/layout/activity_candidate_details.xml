@@ -3,10 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#B6E3E6"
-    android:padding="16dp">
+    android:background="@drawable/background_color">
 
-    <!-- Toolbar with custom styling -->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -16,7 +14,6 @@
         android:backgroundTint="@color/black"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
-        <!-- Custom toolbar title style -->
         <TextView
             android:id="@+id/toolbarTitle"
             android:layout_width="wrap_content"
@@ -25,10 +22,9 @@
             android:fontFamily="@font/bubblegum_sans"
             android:text="Candidate Details"
             android:textColor="@android:color/white"
-            android:textSize="48sp" />
+            android:textSize="35sp" />
     </androidx.appcompat.widget.Toolbar>
 
-    <!-- ImageView to display the candidate's image -->
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="300dp"
@@ -36,9 +32,9 @@
         android:layout_centerHorizontal="true"
         android:layout_below="@id/toolbar"
         android:src="@drawable/recruitlogo"
+        android:layout_marginTop="20dp"
         android:scaleType="centerCrop" />
 
-    <!-- TextView to display the candidate's name -->
     <TextView
         android:id="@+id/textViewName"
         android:layout_width="wrap_content"
@@ -50,7 +46,6 @@
         android:text="Candidate Name"
         android:textColor="#000000" />
 
-    <!-- TextView to display the candidate's description -->
     <TextView
         android:id="@+id/textViewDescription"
         android:layout_width="wrap_content"
@@ -64,7 +59,6 @@
         android:textSize="18sp"
         android:textStyle="bold" />
 
-    <!-- LinearLayout to contain the Connect Now and Message buttons -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -73,7 +67,6 @@
         android:gravity="center_horizontal"
         android:paddingTop="16dp">
 
-        <!-- Connect Now button -->
         <Button
             android:id="@+id/btnConnectNow"
             android:layout_width="wrap_content"
@@ -83,12 +76,11 @@
             android:textSize="20dp"
             android:backgroundTint="@color/black" />
 
-        <!-- Message button -->
         <Button
-            android:id="@+id/btnMessage"
+            android:id="@+id/btnGoToHome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Message"
+            android:text="Post"
             android:textSize="20dp"
             android:backgroundTint="@color/black" />
     </LinearLayout>

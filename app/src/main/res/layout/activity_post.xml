@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_color">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/black"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true">
+
+        <TextView
+            android:id="@+id/toolbarAdditionalText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Post's"
+            android:textSize="35dp"
+            android:fontFamily="@font/bubblegum_sans"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="1" />
+    </androidx.appcompat.widget.Toolbar>
+    <EditText
+        android:id="@+id/editTextPost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="16dp"
+        android:layout_below="@id/toolbar"
+        android:hint="Post a Job"
+        android:padding="8dp" />
+
+    <LinearLayout
+        android:id="@+id/btnlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextPost"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+
+    <Button
+        android:id="@+id/btnSubmitPost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        android:layout_marginEnd="20dp"
+        android:text="Post" />
+
+        <Button
+            android:id="@+id/btnGoToIntro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/black"
+            android:layout_marginStart="20dp"
+            android:text="Intro" />
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewPosts"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/btnlayout"
+        android:layout_marginTop="16dp"/>
+
+
+</RelativeLayout>

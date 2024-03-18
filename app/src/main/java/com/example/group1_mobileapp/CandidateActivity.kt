@@ -1,4 +1,5 @@
 package com.example.group1_mobileapp
+
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager

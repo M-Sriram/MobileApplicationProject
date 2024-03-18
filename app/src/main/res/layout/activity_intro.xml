@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#B6E3E6"
+    android:background="@drawable/background_color"
     tools:context=".IntroActivity">
 
-    <!-- Toolbar -->
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -32,7 +32,7 @@
             android:layout_weight="1" />
     </androidx.appcompat.widget.Toolbar>
 
-    <!-- Main Content -->
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -45,18 +45,19 @@
             android:id="@+id/headerTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Intro Activity"
+            android:text="Introduction"
+            android:textColor="@color/black"
             android:textSize="34sp"
             android:textStyle="bold"
             android:layout_marginBottom="16dp"/>
 
-        <!-- Candidate Image and Name Layout -->
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <!-- Candidate Image -->
+
             <ImageView
                 android:id="@+id/imageViewCandidate"
                 android:layout_width="100dp"
@@ -65,7 +66,7 @@
                 android:layout_marginEnd="16dp"
                 android:src="@drawable/default_candidate_image"/>
 
-            <!-- Candidate Name TextView -->
+
             <TextView
                 android:id="@+id/textViewCandidateName"
                 android:layout_width="wrap_content"
@@ -90,31 +91,45 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Explore Our Candidates"
+            android:layout_gravity="center"
+            android:layout_marginTop="100dp"
             android:textSize="20sp"
             android:backgroundTint="@color/black"/>
-        <Button
-            android:id="@+id/btnLogin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Login"
-            android:layout_below="@id/btnGoToCandidate"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="16dp"/>
-        <Button
-            android:id="@+id/btnLogout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Logout"
-            android:layout_centerInParent="true"
-            android:layout_marginTop="16dp"/>
+
         <Button
             android:id="@+id/btnGoToHome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Go to Home"
-            android:layout_marginTop="16dp"
             android:layout_below="@id/btnLogout"
-            android:layout_centerHorizontal="true"/>
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/black"
+            android:text="Post" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="50dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/black"
+            android:layout_marginEnd="20dp"
+            android:text="Login" />
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/black"
+            android:layout_marginStart="20dp"
+            android:text="Logout" />
+    </LinearLayout>
 
     </LinearLayout>
 

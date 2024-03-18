@@ -1,4 +1,5 @@
 package com.example.group1_mobileapp
+
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -29,8 +30,6 @@ class LoginActivity : AppCompatActivity() {
         btnRegis.setOnClickListener {
             startActivity(Intent(this, RegisterActivity::class.java))
         }
-
-
     }
 
     private fun inputValidation() {

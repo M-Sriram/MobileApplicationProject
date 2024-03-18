@@ -116,7 +116,7 @@ class RegisterActivity : AppCompatActivity() {
                                                 if (realtimeTask.isSuccessful) {
                                                     // User details saved successfully in Realtime Database
                                                     Log.d("RegisterActivity", "User details stored successfully in Realtime Database")
-                                                    startActivity(Intent(this, HomeActivity::class.java))
+                                                    startActivity(Intent(this, PostActivity::class.java))
                                                 } else {
                                                     // Failed to save user details in Realtime Database
                                                     Log.e("RegisterActivity", "Failed to store user details in Realtime Database")

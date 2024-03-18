@@ -36,6 +36,7 @@ class CandidateDetailsActivity : AppCompatActivity() {
             intent.putExtra("candidateImageRes", imageRes) // Pass candidate's image resource URL as an extra to the next activity
             startActivity(intent) // Start IntroActivity
         }
+
     }
 
 }

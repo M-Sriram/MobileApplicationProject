@@ -1,5 +1,6 @@
 package com.example.group1_mobileapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.EditText
@@ -9,9 +10,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
-import com.example.group1_mobileapp.Post
 
-class HomeActivity : AppCompatActivity() {
+class PostActivity : AppCompatActivity() {
 
     private lateinit var editTextPost: EditText
     private lateinit var btnSubmitPost: Button
@@ -23,12 +23,12 @@ class HomeActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home)
+        setContentView(R.layout.activity_post)
 
-        // Initialize views
         editTextPost = findViewById(R.id.editTextPost)
         btnSubmitPost = findViewById(R.id.btnSubmitPost)
         recyclerViewPosts = findViewById(R.id.recyclerViewPosts)
+        val btnGoToIntro = findViewById<Button>(R.id.btnGoToIntro)
 
         // Initialize Firebase
         databaseReference = FirebaseDatabase.getInstance().reference.child("posts")
@@ -45,6 +45,11 @@ class HomeActivity : AppCompatActivity() {
 
         // Set adapter to RecyclerView
         recyclerViewPosts.adapter = postAdapter
+        btnGoToIntro.setOnClickListener {
+            // Navigate to IntroActivity
+            val intent = Intent(this, IntroActivity::class.java)
+            startActivity(intent)
+        }
 
         // Set onClickListener for posting
         btnSubmitPost.setOnClickListener {
@@ -61,7 +66,6 @@ class HomeActivity : AppCompatActivity() {
                 }
             }
         }
-
         // Load initial posts
         loadInitialPosts()
     }
@@ -89,7 +93,7 @@ class HomeActivity : AppCompatActivity() {
             }
 
             override fun onCancelled(databaseError: DatabaseError) {
-                Log.e("HomeActivity", "Error loading initial posts", databaseError.toException())
+                Log.e("PostActivity", "Error loading initial posts", databaseError.toException())
             }
         })
     }
@@ -102,9 +106,9 @@ class HomeActivity : AppCompatActivity() {
         db.child("users").child(userId).setValue(user)
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
-                    Log.d("HomeActivity", "User data saved successfully")
+                    Log.d("PostActivity", "User data saved successfully")
                 } else {
-                    Log.e("HomeActivity", "Failed to save user data", task.exception)
+                    Log.e("PostActivity", "Failed to save user data", task.exception)
                 }
             }
     }
